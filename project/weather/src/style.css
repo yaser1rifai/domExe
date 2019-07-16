@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+h1{
+  color: red;
+  background-color: yellow;
+}
+
+h2{
+  color: green;
+  background-color:burlywood;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 50px;
+  width: 10%;
+  padding: 8px 20px;
+  margin: 8px 0;
+}
+
+.container {
+  border-radius: 5px;
+  background-color:lightgray;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+input ,span{
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 30px;
+}
