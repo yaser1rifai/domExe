@@ -18,7 +18,8 @@ myButton.addEventListener("click", function(){
 
     fetch(api)
     .then(response=> {
-        return response.json()
+        return response.json() ; 
+        console.log(response.json())
     })
     .then(data=>{
         console.log(data)
@@ -31,3 +32,4 @@ myButton.addEventListener("click", function(){
         //myExtra.innerHTML = data. etc.;
     })
 })
+
