@@ -6,10 +6,10 @@ import  {myKey} from "./config.js";
 
 
 /* let myIcon = document.querySelector(".icon"); */
-let myTemperature = document.querySelector(".temperature");
-let myWind = document.querySelector(".wind");
-let myCountry = document.querySelector(".country");
-let myHumidity = document.querySelector(".humidity");
+let myTemperature = document.querySelector("#vertical");
+let myWind = document.querySelector("#vertical2");
+let myCountry = document.querySelector("#vertical3");
+let myHumidity = document.querySelector("#vertical4");
 let myButton = document.querySelector("#btn");
 
 myButton.addEventListener("click", function(){
@@ -22,13 +22,13 @@ myButton.addEventListener("click", function(){
         console.log(response.json())
     })
     .then(data=>{
-        console.log(data)
+        console.table(data)
 
       /*  myIcon.innerHTML = data.weather[0].description; */
-        myTemperature.innerHTML += data.main.temp;
-        myWind.innerHTML+= data.wind.speed;
-        myCountry.innerHTML += data.sys.country;
-        myHumidity.innerHTML += data.main.humidity+"%";
+        myTemperature.innerHTML= data.main.temp;
+        myWind.innerHTML= data.wind.speed;
+        myCountry.innerHTML = data.sys.country;
+        myHumidity.innerHTML = data.main.humidity+"%";
         //myExtra.innerHTML = data. etc.;
     })
 })
