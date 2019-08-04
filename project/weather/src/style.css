@@ -15,17 +15,8 @@ h1{
 
 
 button {
-  /* background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  height: 50px;
-  width: 30%;
-  padding: 8px 20px;
-  margin: 8px 0; */
-  width: 50%;
   
+  width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -57,12 +48,7 @@ span{
   box-shadow: 5px 10px #888888;
 }
 
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
+
 
 input {
   width: 50%;

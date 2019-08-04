@@ -1,0 +1,15 @@
+$theme-colors: (
+  "primary": #666969,
+);
+
+$font-stack: Helvetica, sans-serif;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  text-align: center;
+}
+
+img {
+  max-width: 500px;
+}

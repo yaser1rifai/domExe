@@ -1,15 +1,14 @@
 
-/* import createBanner from "./banner.js"; */
+
 import "./style.css";
 import  {myKey} from "./config.js";
-/* import WebpackImg from "./webpack-logo.png"; */
 
 
-/* let myIcon = document.querySelector(".icon"); */
-let myTemperature = document.querySelector("#vertical");
-let myWind = document.querySelector("#vertical2");
-let myCountry = document.querySelector("#vertical3");
-let myHumidity = document.querySelector("#vertical4");
+
+let myTemperature = document.querySelector("#data1");
+let myWind = document.querySelector("#data2");
+let myCountry = document.querySelector("#data3");
+let myHumidity = document.querySelector("#data4");
 let myButton = document.querySelector("#btn");
 
 myButton.addEventListener("click", function(){
@@ -19,17 +18,17 @@ myButton.addEventListener("click", function(){
     fetch(api)
     .then(response=> {
         return response.json() ; 
-        console.log(response.json())
+        console.table(response.json())
     })
     .then(data=>{
         console.table(data)
 
-      /*  myIcon.innerHTML = data.weather[0].description; */
-        myTemperature.innerHTML= data.main.temp;
+        
+        myTemperature.innerHTML= Math.round(((data.main.temp)-273.15 )* 100) / 100;
         myWind.innerHTML= data.wind.speed;
         myCountry.innerHTML = data.sys.country;
         myHumidity.innerHTML = data.main.humidity+"%";
-        //myExtra.innerHTML = data. etc.;
+       
     })
 })
 
